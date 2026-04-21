@@ -1,0 +1,297 @@
+{
+  "_meta": {
+    "season": "2025-26",
+    "as_of": "2026-03-06",
+    "sources": [
+      "Sports Business Classroom 2025-26 Apron Tracker (Eric Pincus)",
+      "NBA.com 2025-26 cap announcement",
+      "Spotrac team payroll figures"
+    ],
+    "thresholds": {
+      "cap": 154.647,
+      "tax": 187.895,
+      "apron1": 195.945,
+      "apron2": 207.824,
+      "min_team_salary": 139.182
+    }
+  },
+  "LAL": {
+    "abbr": "LAL",
+    "name": "Los Angeles Lakers",
+    "payroll": 195.3,
+    "status": "OVER TAX",
+    "summary": "Post-AD-trade era: Doncic + LeBron pairing. Hard-capped at first apron, sitting just $0.6M below the ceiling \u2014 paper-thin margin for moves.",
+    "roster": [
+      {
+        "name": "Luka Doncic",
+        "salary": 45.0,
+        "yrs": 4,
+        "note": "5yr/$210M extension signed Aug 2025"
+      },
+      {
+        "name": "LeBron James",
+        "salary": 52.6,
+        "yrs": 1,
+        "note": "Player option taken \u00b7 likely final NBA year"
+      },
+      {
+        "name": "Austin Reaves",
+        "salary": 13.9,
+        "yrs": 1,
+        "note": "Player option declined \u00b7 UFA next summer"
+      },
+      {
+        "name": "Rui Hachimura",
+        "salary": 18.3,
+        "yrs": 2,
+        "note": ""
+      },
+      {
+        "name": "Deandre Ayton",
+        "salary": 8.1,
+        "yrs": 1,
+        "note": "NTMLE signing post-bought-out"
+      },
+      {
+        "name": "Gabe Vincent",
+        "salary": 11.5,
+        "yrs": 1,
+        "note": "Expiring"
+      },
+      {
+        "name": "Jake LaRavia",
+        "salary": 6.0,
+        "yrs": 2,
+        "note": "NTMLE signing"
+      }
+    ],
+    "notes": [
+      "Hard-capped at first apron (only $0.6M of breathing room)",
+      "Doncic trade reshaped franchise trajectory",
+      "Reaves' UFA decision is the 2026 cap fulcrum",
+      "LeBron retirement timing affects 26-27 cap completely"
+    ]
+  },
+  "BOS": {
+    "abbr": "BOS",
+    "name": "Boston Celtics",
+    "payroll": 187.3,
+    "status": "OVER TAX",
+    "summary": "Reset year \u2014 traded Holiday and Porzingis to escape the second apron and reduce the tax bill. Now hard-capped at apron 2 via a cash-out transaction.",
+    "roster": [
+      {
+        "name": "Jayson Tatum",
+        "salary": 54.1,
+        "yrs": 5,
+        "note": "Supermax \u00b7 injured most of 25-26"
+      },
+      {
+        "name": "Jaylen Brown",
+        "salary": 53.1,
+        "yrs": 4,
+        "note": "Supermax extension"
+      },
+      {
+        "name": "Derrick White",
+        "salary": 28.1,
+        "yrs": 4,
+        "note": "Extension signed last summer"
+      },
+      {
+        "name": "Sam Hauser",
+        "salary": 10.0,
+        "yrs": 4,
+        "note": "Extension kicked in 25-26"
+      },
+      {
+        "name": "Anfernee Simons",
+        "salary": 27.7,
+        "yrs": 1,
+        "note": "Acquired in Holiday trade \u00b7 expiring"
+      },
+      {
+        "name": "Neemias Queta",
+        "salary": 2.3,
+        "yrs": 1,
+        "note": "Bargain frontcourt depth"
+      }
+    ],
+    "notes": [
+      "Hard-capped at second apron ($207.824M)",
+      "Tatum injury reshaped the entire season's strategic outlook",
+      "Holiday + Porzingis trades cut ~$50M from tax bill",
+      "Brown remains untouchable per ownership"
+    ]
+  },
+  "TOR": {
+    "abbr": "TOR",
+    "name": "Toronto Raptors",
+    "payroll": 193.4,
+    "status": "OVER TAX",
+    "summary": "Built fully around Scottie Barnes max extension. Hard-capped at first apron via NTMLE move. Quickley extension already in books.",
+    "roster": [
+      {
+        "name": "Scottie Barnes",
+        "salary": 45.0,
+        "yrs": 4,
+        "note": "Rookie max extension kicked in"
+      },
+      {
+        "name": "Immanuel Quickley",
+        "salary": 32.5,
+        "yrs": 4,
+        "note": "$175M extension"
+      },
+      {
+        "name": "RJ Barrett",
+        "salary": 28.0,
+        "yrs": 3,
+        "note": ""
+      },
+      {
+        "name": "Brandon Ingram",
+        "salary": 36.0,
+        "yrs": 3,
+        "note": "Acquired from NOP \u00b7 extension signed"
+      },
+      {
+        "name": "Jakob Poeltl",
+        "salary": 19.5,
+        "yrs": 2,
+        "note": "Player option 26-27"
+      },
+      {
+        "name": "Gradey Dick",
+        "salary": 5.5,
+        "yrs": 2,
+        "note": "Rookie scale \u00b7 sophomore"
+      },
+      {
+        "name": "Ja'Kobe Walter",
+        "salary": 4.0,
+        "yrs": 3,
+        "note": "Rookie scale"
+      }
+    ],
+    "notes": [
+      "Hard-capped at first apron (only $2.6M under)",
+      "Barnes + Quickley + Ingram form ~$113M of payroll alone",
+      "Cap flexibility limited until 27-28",
+      "Pick capital still solid"
+    ]
+  },
+  "GSW": {
+    "abbr": "GSW",
+    "name": "Golden State Warriors",
+    "payroll": 204.4,
+    "status": "2ND APRON",
+    "summary": "Curry-Butler-Green core for one last run. Above the second apron, hard-capped via TMLE. Maximum tax exposure.",
+    "roster": [
+      {
+        "name": "Stephen Curry",
+        "salary": 55.8,
+        "yrs": 1,
+        "note": "Final year of supermax \u00b7 extension talks ongoing"
+      },
+      {
+        "name": "Jimmy Butler",
+        "salary": 49.2,
+        "yrs": 3,
+        "note": "Extension signed at trade \u00b7 max"
+      },
+      {
+        "name": "Draymond Green",
+        "salary": 24.1,
+        "yrs": 2,
+        "note": "Player option 26-27"
+      },
+      {
+        "name": "Andrew Wiggins",
+        "salary": 26.3,
+        "yrs": 1,
+        "note": "Player option \u00b7 likely opts in"
+      },
+      {
+        "name": "Jonathan Kuminga",
+        "salary": 9.0,
+        "yrs": 1,
+        "note": "RFA after qualifying offer drama"
+      },
+      {
+        "name": "Buddy Hield",
+        "salary": 9.4,
+        "yrs": 2,
+        "note": "Sign-and-trade from PHI"
+      },
+      {
+        "name": "Al Horford",
+        "salary": 5.7,
+        "yrs": 1,
+        "note": "TMLE signing"
+      }
+    ],
+    "notes": [
+      "Above second apron",
+      "Hard-capped at $207.824M via TMLE (Horford)",
+      "Curry extension is the franchise question for 2026",
+      "Butler trade reshaped the championship window"
+    ]
+  },
+  "OKC": {
+    "abbr": "OKC",
+    "name": "Oklahoma City Thunder",
+    "payroll": 187.2,
+    "status": "OVER TAX",
+    "summary": "Defending champions. Hard-capped at second apron via cash-out transaction. Young core with all extensions kicking in over next two summers.",
+    "roster": [
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "salary": 38.3,
+        "yrs": 5,
+        "note": "Supermax \u00b7 MVP form"
+      },
+      {
+        "name": "Chet Holmgren",
+        "salary": 13.6,
+        "yrs": 4,
+        "note": "Rookie max extension kicks in 26-27"
+      },
+      {
+        "name": "Jalen Williams",
+        "salary": 14.6,
+        "yrs": 4,
+        "note": "Rookie max extension kicks in 26-27"
+      },
+      {
+        "name": "Isaiah Hartenstein",
+        "salary": 28.5,
+        "yrs": 2,
+        "note": "Team option 27-28"
+      },
+      {
+        "name": "Luguentz Dort",
+        "salary": 18.2,
+        "yrs": 3,
+        "note": "Team option 26-27"
+      },
+      {
+        "name": "Alex Caruso",
+        "salary": 9.9,
+        "yrs": 4,
+        "note": "Bargain extension"
+      },
+      {
+        "name": "Cason Wallace",
+        "salary": 5.0,
+        "yrs": 2,
+        "note": "Rookie scale"
+      }
+    ],
+    "notes": [
+      "Hard-capped at second apron",
+      "SGA + Holmgren + Williams extensions add ~$80M to 26-27 cap",
+      "Owns 13+ first-round picks/swaps through 2030",
+      "Most enviable long-term cap structure in the league"
+    ]
+  }
+}
