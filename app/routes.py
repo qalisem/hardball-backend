@@ -83,15 +83,16 @@ def get_team(abbr):
 
 @bp.route("/chat", methods=["POST"])
 def chat():
-    """Proxy to Anthropic. The whole reason this backend exists."""
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key or not api_key.strip():
-        current_app.logger.error("ANTHROPIC_API_KEY not configured")
-        return jsonify({"error": "server_misconfigured"}), 500
+    """Proxy to Anthropic. The whole reason this backend exists.
 
+    Frontend sends: {"messages": [{"role": "user", "content": "..."}, ...]}
+    We add the system prompt, the API key, and forward to Anthropic.
+    The key never touches the browser.
+    """
     body = request.get_json(silent=True) or {}
     messages = body.get("messages")
 
+    # Validate input shape — never blindly forward whatever the client sent
     if not isinstance(messages, list) or not messages:
         return jsonify({"error": "messages_required"}), 400
     if len(messages) > MAX_HISTORY:
@@ -111,6 +112,11 @@ def chat():
 
     if not cleaned:
         return jsonify({"error": "empty_messages"}), 400
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key or not api_key.strip():
+        current_app.logger.error("ANTHROPIC_API_KEY not configured")
+        return jsonify({"error": "server_misconfigured"}), 500
 
     payload = {
         "model": os.environ.get("ANTHROPIC_MODEL", "claude-haiku-4-5-20251001"),
