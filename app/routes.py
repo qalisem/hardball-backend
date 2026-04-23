@@ -30,7 +30,6 @@ META = _DATA.get("_meta", {})
 
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-MODEL = "claude-sonnet-4-20250514"
 MAX_TOKENS = 1000
 MAX_HISTORY = 30
 
@@ -114,7 +113,7 @@ def chat():
         return jsonify({"error": "empty_messages"}), 400
 
     payload = {
-        "model": MODEL,
+        "model": os.environ.get("ANTHROPIC_MODEL", "claude-haiku-4-5-20251001"),
         "max_tokens": MAX_TOKENS,
         "system": SYSTEM_PROMPT,
         "messages": cleaned,
