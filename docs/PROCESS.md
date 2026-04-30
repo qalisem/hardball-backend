@@ -1,6 +1,6 @@
 # Process — Sprint History
 
-Hardball is built in two-week-ish iterations. Each sprint ships to production and produces a retro entry below. Tracking lives in GitHub Projects; cadence is light-Agile (single contributor).
+Hardball was built across four two-week-ish iterations from late March through the end of April 2026. Each sprint shipped to production and produced a retro entry below. Tracking lived in GitHub Projects; cadence was light-Agile (single contributor).
 
 ---
 
@@ -35,8 +35,30 @@ Hardball is built in two-week-ish iterations. Each sprint ships to production an
 
 ---
 
-## Backlog
+## Sprint 4 (Apr 27 – Apr 30, 2026) — All 30 teams + 25-26 data
 
-- All 30 teams with current 25-26 figures.
-- Updated system prompt covering current league situation (Doncic-Lakers, Butler-Warriors, KAT-Knicks, Bane-Magic, Durant-Rockets).
-- Refactor frontend to fetch team data from backend on mount instead of hardcoding it.
+**Shipped.** Expanded `teams.json` to all 30 NBA teams with current 2025-26 season figures (cap $154.647M, tax $187.895M, apron 1 $195.945M, apron 2 $207.824M; data dated 2026-03-06 from the Sports Business Classroom apron tracker). Rewrote the system prompt with the current league situation: Cleveland leading payroll at $211.7M, post-Doncic-trade Lakers, Butler-Warriors, KAT-Knicks, Bane-Magic, Durant-Rockets. Refactored the frontend to fetch team data from the backend on mount instead of hardcoding it — future roster updates only need a backend redeploy and a CloudFront invalidation, no frontend rebuild.
+
+**Retro.** Refactoring module-level constants (`TEAM_DATA`, `TICKER`) into component state required updating three subcomponents (Ticker, EmptyState, TeamDrawer) to receive the data as props. Caught all three only after blank-screen runtime errors at the live URL. **Lesson:** install ESLint with `no-undef` and `react-hooks` rules to catch these at edit time, not on production.
+
+---
+
+## Backlog (next sprint — not yet started)
+
+- **Trade machine.** Drag-and-drop UI for building hypothetical trades; backend endpoint validating CBA legality (125% + $100K outgoing rule, apron impact, hard-cap implications).
+- **Extension calculator.** Project max contracts based on player tier (25%/30%/35%), raise %, and Bird Rights status.
+- **Real-time data integration.** Spotrac scraping or SportRadar API for daily payroll updates instead of a static snapshot.
+- **ESLint** with `no-undef` and `react-hooks` plugins to catch the Sprint 4 class of bug at edit time.
+
+---
+
+## Definition of Done
+
+A sprint item is done when:
+
+1. PR merged to `main`.
+2. CI passes (pytest on backend, build check on frontend).
+3. Backend changes deployed via `eb deploy`.
+4. Frontend changes synced to S3 (`aws s3 sync dist/ s3://hardball-web-qali --delete`) and CloudFront invalidated (`aws cloudfront create-invalidation --distribution-id E1AEOT2IV7WSET --paths "/*"`).
+5. Manual smoke test in production: load https://dz3csw06yjedg.cloudfront.net, send a chat, open a team drawer, verify `/api/health` returns the current `team_count`.
+6. Sprint log in this file updated with what shipped and what was learned.
